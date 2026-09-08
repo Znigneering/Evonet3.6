@@ -1,0 +1,23 @@
+# Runtime dependencies for 64-bit CPython 3.6 (torch requires Python >=3.6.2).
+# Bootstrap pip/setuptools/wheel with the versions documented in README.md.
+# Install matching CPU or CUDA torch/torchvision wheels first if needed.
+# Public version pins also accept matching +cpu / +cu113 wheel builds.
+
+# Model training, datasets, image loading, and progress reporting.
+torch==1.10.2
+torchvision==0.11.3
+numpy==1.19.5
+Pillow==8.4.0
+tqdm==4.64.1
+
+# TIM loss and genetic-programming boosting (including Numba runtime deps).
+numba==0.53.1
+llvmlite==0.36.0
+setuptools==59.6.0
+
+# Pin transitive dependencies to releases compatible with Python 3.6.
+typing-extensions==4.1.1
+dataclasses==0.8; python_version < "3.7"
+importlib-resources==5.4.0; python_version < "3.7"
+zipp==3.6.0; python_version < "3.7"
+colorama==0.4.5; platform_system == "Windows"
