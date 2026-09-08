@@ -49,8 +49,6 @@ python -m pip install "torch==1.10.2+cu113" "torchvision==0.11.3+cu113" -r requi
 - **Omniglot:** downloaded automatically to `../data`. Training uses background classes; validation and evaluation use evaluation classes.
 - **OmniImage:** extract the archive under `../data` to obtain `../data/OmnImage84_100/<class_name>/<image_file>`, or update `DATA_ROOT`. Supported formats: PNG, JPG, JPEG, and BMP. Classes are split 80/20 with seed `42`; validation and testing share the held-out classes.
 
-The original OmniImage download host returned HTTP 403 when checked on 2026-09-08; consult the official repository for availability updates.
-
 Images are resized to 84 x 84 with three channels. For OmniImage, each class needs at least `k_shot + n_query` images, and each split must retain at least `n_way` valid classes. Omniglot samples with replacement when images are insufficient, so support/query overlap is possible.
 
 ## Training and evaluation
