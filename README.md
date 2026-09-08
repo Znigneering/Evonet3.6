@@ -178,7 +178,7 @@ This smoke test samples a 5-way, 1-shot episode with 5 query images per class, s
 
 All three scripts use a learning rate of `1e-3`. In table order, their pruning thresholds and evolution intervals are `0.001` / 500, `0.01` / 50, and `0.001` / 1,000 episodes. For an initial end-to-end check, reduce `N_TRAIN_EPISODES`, validation counts, and episode sizes in the scripts.
 
-### OmniImage: ResNet-50
+### OmniImage: ResNet-50 (still in experiments)
 
 After preparing the data, start training:
 
